@@ -4,172 +4,142 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#080808">
-<title>7EDGE | The Seven Edge Group</title>
+<meta name="description" content="FYZ Group Of Companies">
+<title>FYZ Group Of Companies</title>
 
 <style>
 :root{
-  --gold:#e5b83f;
-  --light:#ffdf83;
-  --bg:#080808;
-  --panel:#151515;
-  --muted:#bdbdbd;
+  --gold:#d4af57;
+  --dark:#07111f;
+  --panel:#101f32;
+  --text:#f5f5f5;
+  --muted:#aab5c4;
 }
-*{box-sizing:border-box;margin:0;padding:0}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{
-  background:var(--bg);
-  color:white;
+  margin:0;
   font-family:Arial,sans-serif;
-  line-height:1.6;
+  background:var(--dark);
+  color:var(--text);
 }
 header{
-  background:#050505;
-  border-bottom:1px solid #8a702b;
+  background:#091525;
+  border-bottom:1px solid var(--gold);
   padding:16px 5%;
   display:flex;
-  justify-content:space-between;
   align-items:center;
+  justify-content:space-between;
   flex-wrap:wrap;
-  gap:14px;
+  gap:15px;
+  position:sticky;
+  top:0;
+  z-index:10;
 }
-.logo{
-  color:var(--gold);
-  font-size:30px;
-  font-weight:900;
-  letter-spacing:3px;
-}
-.logo span{color:white}
-nav{display:flex;gap:17px;flex-wrap:wrap}
+.logo{color:var(--gold);font-size:23px;font-weight:bold}
+nav{display:flex;gap:15px;flex-wrap:wrap}
 nav a{color:white;text-decoration:none;font-size:14px}
 nav a:hover{color:var(--gold)}
 .hero{
+  min-height:470px;
+  padding:90px 20px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
   text-align:center;
-  padding:75px 15px;
-  background:radial-gradient(ellipse at center,#33270d,#080808 72%);
+  background:linear-gradient(120deg,#07111f,#142b45,#07111f);
 }
-.hero h1{
-  color:var(--gold);
-  font-size:clamp(32px,6vw,58px);
+.hero h1{font-size:clamp(32px,6vw,58px);margin:0 0 15px}
+.gold{color:var(--gold)}
+.hero p{
+  color:#c5cfdb;
+  max-width:650px;
+  line-height:1.7;
+  margin:0 auto 25px;
 }
-.hero p{color:#ddd;margin:12px 0 22px}
-.container{width:92%;max-width:1100px;margin:auto}
-section{padding:45px 0}
-.section-title{
-  color:var(--gold);
-  text-align:center;
-  font-size:30px;
-  margin-bottom:25px;
-}
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
-  gap:18px;
-}
-.card,.panel{
-  background:var(--panel);
-  border:1px solid #66521f;
-  border-radius:13px;
-  padding:22px;
-}
-.card{text-align:center}
-.card h3,.panel h3{color:var(--gold)}
-.amount{font-size:28px;font-weight:bold;margin:10px}
-.card p,.muted{color:var(--muted);font-size:14px}
-button,.btn{
+.btn{
+  display:inline-block;
+  padding:13px 22px;
+  background:var(--gold);
+  color:#101010;
   border:0;
   border-radius:7px;
-  background:linear-gradient(120deg,var(--gold),var(--light));
-  color:#111;
-  padding:12px 18px;
   font-weight:bold;
-  cursor:pointer;
-  display:inline-block;
   text-decoration:none;
-  margin-top:12px;
+  cursor:pointer;
+  margin:5px;
 }
-button:hover,.btn:hover{opacity:.87}
-button.secondary{
-  background:#292929;
-  color:white;
-  border:1px solid #80672a;
+.btn:hover{background:#f0d17e}
+.btn-outline{background:transparent;color:var(--gold);border:1px solid var(--gold)}
+section{padding:65px 6%}
+.section-title{text-align:center;margin:0 0 35px;font-size:30px}
+.section-title span{color:var(--gold)}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
 }
-input,select{
+.card{
+  background:var(--panel);
+  border:1px solid #263c55;
+  padding:25px;
+  border-radius:13px;
+}
+.card h3{color:var(--gold);margin-top:0}
+.card p{color:var(--muted);line-height:1.6}
+.amount{font-size:25px;font-weight:bold;color:white;margin:10px 0}
+.form-card{
+  max-width:650px;
+  margin:auto;
+  background:var(--panel);
+  border:1px solid #35465c;
+  border-radius:13px;
+  padding:25px;
+}
+input,select,textarea{
   display:block;
   width:100%;
-  margin:10px 0;
-  padding:13px;
+  padding:14px;
+  margin:12px 0;
+  border:1px solid #46566b;
   border-radius:7px;
-  border:1px solid #66521f;
-  background:#090909;
+  background:#091525;
   color:white;
   font-size:15px;
 }
-input:focus,select:focus{outline:1px solid var(--gold)}
-.form-panel{max-width:620px;margin:auto}
-.form-panel button{width:100%}
-.tabs{display:flex;gap:10px;margin-bottom:18px}
-.tabs button{flex:1;margin:0}
+input[type=file]{padding:10px}
+label{color:#d8dce3;font-size:14px}
+.info{
+  background:#0a1929;
+  border-left:3px solid var(--gold);
+  padding:15px;
+  margin:15px 0;
+  line-height:1.7;
+  color:#d5dce6;
+}
 .hidden{display:none!important}
-.dashboard-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-  gap:15px;
-  margin:18px 0;
-}
-.stat{
-  padding:18px;
-  border-radius:10px;
-  background:#090909;
-  border:1px solid #57471e;
-  overflow-wrap:anywhere;
-}
-.stat small{color:var(--muted)}
-.stat strong{
-  display:block;
-  color:var(--gold);
-  font-size:20px;
-}
-.timer{
-  display:flex;
-  gap:10px;
-  justify-content:center;
-  flex-wrap:wrap;
-  margin:20px 0;
-}
-.time{
-  background:#090909;
-  border:1px solid #66521f;
-  border-radius:8px;
-  padding:12px;
-  min-width:75px;
-  text-align:center;
-}
-.time strong{
-  display:block;
-  color:var(--gold);
-  font-size:27px;
-}
-.time span{font-size:12px;color:var(--muted)}
-.center{text-align:center}
-.contact{
-  text-align:center;
-  background:#111;
-  border-top:1px solid #66521f;
-}
 footer{
+  background:#050c15;
+  padding:35px 6%;
   text-align:center;
   color:var(--muted);
-  padding:22px;
-  font-size:13px;
-  background:#050505;
+  line-height:1.8;
 }
-.small{font-size:12px;color:var(--muted)}
-.text-link{color:var(--gold)}
-.panel{margin-top:16px}
+footer a{color:var(--gold)}
+.dashboard-box{
+  background:#0b1a2b;
+  padding:18px;
+  border-radius:9px;
+  margin:12px 0;
+  border:1px solid #263c55;
+}
+.status{color:var(--gold);font-weight:bold}
+hr{border-color:#35465c;margin:25px 0}
 @media(max-width:600px){
   header{justify-content:center}
   nav{justify-content:center}
-  .tabs{flex-direction:column}
+  nav a{font-size:12px}
+  section{padding:45px 5%}
 }
 </style>
 </head>
@@ -177,575 +147,507 @@ footer{
 <body>
 
 <header>
-  <div class="logo">7<span>EDGE</span></div>
+  <div class="logo">FYZ GROUP</div>
   <nav>
     <a href="#home">Home</a>
-    <a href="#plans">Plans</a>
-    <a href="#account">My Account</a>
+    <a href="#plans">Investment Plans</a>
+    <a href="#account">Login / Sign Up</a>
+    <a href="#dashboard">Dashboard</a>
+    <a href="#payment">Payment</a>
+    <a href="#proof">Payment Proof</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
 
 <section class="hero" id="home">
-  <div class="container">
-    <h1>THE SEVEN EDGE GROUP</h1>
-    <p>Welcome to 7EDGE</p>
-    <a href="#account" class="btn">Create Account / Login</a>
+  <div>
+    <h1>FYZ GROUP OF <span class="gold">COMPANIES</span></h1>
+    <p>Welcome to FYZ Group Of Companies. Explore our plans and contact our team for further details.</p>
+    <a class="btn" href="#plans">Explore Plans</a>
+    <a class="btn btn-outline" href="#contact">Contact Us</a>
   </div>
 </section>
 
 <section id="plans">
-  <div class="container">
-    <h2 class="section-title">Investment Plans</h2>
+  <h2 class="section-title">Investment <span>Plans</span></h2>
+  <div class="grid">
 
-    <div class="grid">
-      <div class="card">
-        <h3>Plan 01</h3>
-        <div class="amount">PKR 1,000</div>
-        <p>7 Days</p>
-        <button onclick="choosePlan(1000)">Select Plan</button>
-      </div>
-
-      <div class="card">
-        <h3>Plan 02</h3>
-        <div class="amount">PKR 2,000</div>
-        <p>7 Days</p>
-        <button onclick="choosePlan(2000)">Select Plan</button>
-      </div>
-
-      <div class="card">
-        <h3>Plan 03</h3>
-        <div class="amount">PKR 3,000</div>
-        <p>7 Days</p>
-        <button onclick="choosePlan(3000)">Select Plan</button>
-      </div>
-
-      <div class="card">
-        <h3>Plan 04</h3>
-        <div class="amount">PKR 4,000</div>
-        <p>7 Days</p>
-        <button onclick="choosePlan(4000)">Select Plan</button>
-      </div>
+    <div class="card">
+      <h3>Starter Plan</h3>
+      <p>Investment Amount</p>
+      <div class="amount">PKR 1,000</div>
+      <p>Target Amount</p>
+      <div class="amount gold">PKR 2,000</div>
+      <button class="btn" onclick="selectPlan('Starter Plan','1000')">Select Plan</button>
     </div>
+
+    <div class="card">
+      <h3>Basic Plan</h3>
+      <p>Investment Amount</p>
+      <div class="amount">PKR 2,000</div>
+      <p>Target Amount</p>
+      <div class="amount gold">PKR 4,000</div>
+      <button class="btn" onclick="selectPlan('Basic Plan','2000')">Select Plan</button>
+    </div>
+
+    <div class="card">
+      <h3>Standard Plan</h3>
+      <p>Investment Amount</p>
+      <div class="amount">PKR 3,000</div>
+      <p>Target Amount</p>
+      <div class="amount gold">PKR 6,000</div>
+      <button class="btn" onclick="selectPlan('Standard Plan','3000')">Select Plan</button>
+    </div>
+
+    <div class="card">
+      <h3>Premium Plan</h3>
+      <p>Investment Amount</p>
+      <div class="amount">PKR 4,000</div>
+      <p>Target Amount</p>
+      <div class="amount gold">PKR 8,000</div>
+      <button class="btn" onclick="selectPlan('Premium Plan','4000')">Select Plan</button>
+    </div>
+
   </div>
 </section>
 
 <section id="account">
-<div class="container">
-<h2 class="section-title">7EDGE Account</h2>
+  <h2 class="section-title">Customer <span>Account</span></h2>
+  <div class="form-card">
 
-<div id="authArea" class="panel form-panel">
+    <div id="authForms">
+      <h3 class="gold">Create Account</h3>
+      <form id="signupForm">
+        <input id="signupName" placeholder="Full Name" required>
+        <input id="signupPhone" placeholder="Mobile Number" required>
+        <input id="signupEmail" type="email" placeholder="Email Address" required>
+        <input id="signupPassword" type="password" minlength="6" placeholder="Create Password" required>
+        <button class="btn" type="submit">Sign Up</button>
+      </form>
 
-  <div class="tabs">
-    <button type="button" onclick="showAuth('register')">Create Account</button>
-    <button type="button" class="secondary" onclick="showAuth('login')">Login</button>
-  </div>
+      <hr>
 
-  <form id="registerForm">
-    <h3>Create Your Account</h3>
-    <input id="regName" placeholder="Full Name" required maxlength="70">
-    <input id="regUsername" placeholder="Choose Username" required minlength="3" maxlength="25">
-    <input id="regEmail" type="email" placeholder="Email Address" required>
-    <input id="regPhone" type="tel" placeholder="Phone / WhatsApp Number" required>
-    <input id="regPassword" type="password" placeholder="Create Password (minimum 8 characters)" required minlength="8">
-    <input id="regConfirm" type="password" placeholder="Confirm Password" required minlength="8">
-    <button type="submit">Create Account</button>
-  </form>
+      <h3 class="gold">Customer Login</h3>
+      <form id="loginForm">
+        <input id="loginEmail" type="email" placeholder="Email Address" required>
+        <input id="loginPassword" type="password" placeholder="Password" required>
+        <button class="btn" type="submit">Login</button>
+      </form>
 
-  <form id="loginForm" class="hidden">
-    <h3>Login to Your Account</h3>
-    <input id="loginIdentity" placeholder="Username or Email" required>
-    <input id="loginPassword" type="password" placeholder="Password" required>
-    <button type="submit">Login</button>
-    <p class="center">
-      <a href="#" class="text-link" onclick="showAuth('recover');return false">Forgot Password?</a>
-    </p>
-  </form>
-
-  <form id="recoverForm" class="hidden">
-    <h3>Reset Password</h3>
-    <input id="recoverUsername" placeholder="Username" required>
-    <input id="recoverCode" placeholder="Recovery Code" required>
-    <input id="newPassword" type="password" placeholder="New Password (minimum 8 characters)" required minlength="8">
-    <input id="newConfirm" type="password" placeholder="Confirm New Password" required minlength="8">
-    <button type="submit">Reset Password</button>
-    <p class="center">
-      <a href="#" class="text-link" onclick="showAuth('login');return false">Back to Login</a>
-    </p>
-  </form>
-
-  <div id="authMessage" class="notice hidden" role="status"></div>
-</div>
-
-<div id="dashboard" class="panel hidden">
-
-  <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center">
-    <div>
-      <h3>My Account Dashboard</h3>
-      <p class="muted">Welcome, <strong id="dashName"></strong></p>
-    </div>
-    <button class="secondary" onclick="logout()">Logout</button>
-  </div>
-
-  <div class="dashboard-grid">
-    <div class="stat">
-      <small>Username</small>
-      <strong id="dashUsername"></strong>
-    </div>
-    <div class="stat">
-      <small>Email</small>
-      <strong id="dashEmail"></strong>
-    </div>
-    <div class="stat">
-      <small>Selected Plan</small>
-      <strong id="dashPlan">Not selected</strong>
-    </div>
-  </div>
-
-  <div class="panel">
-    <h3>Choose Your Plan</h3>
-    <select id="accountPlan">
-      <option value="">Select a plan</option>
-      <option value="1000">PKR 1,000</option>
-      <option value="2000">PKR 2,000</option>
-      <option value="3000">PKR 3,000</option>
-      <option value="4000">PKR 4,000</option>
-    </select>
-    <button onclick="savePlan()">Save Selected Plan</button>
-  </div>
-
-  <div class="panel center">
-    <h3>SEVEN DAY COUNTDOWN</h3>
-
-    <div class="timer">
-      <div class="time"><strong id="days">07</strong><span>Days</span></div>
-      <div class="time"><strong id="hours">00</strong><span>Hours</span></div>
-      <div class="time"><strong id="minutes">00</strong><span>Minutes</span></div>
-      <div class="time"><strong id="seconds">00</strong><span>Seconds</span></div>
+      <p id="authMessage"></p>
     </div>
 
-    <p id="timerStatus" class="muted">Countdown not started</p>
-    <button onclick="startCountdown()">Start Countdown</button>
-    <button class="secondary" onclick="resetCountdown()">Reset Countdown</button>
+    <div id="loggedIn" class="hidden">
+      <h3 class="gold">Welcome, <span id="customerName"></span></h3>
+      <p>You are logged in.</p>
+      <a class="btn" href="#dashboard">Open Dashboard</a>
+      <button class="btn btn-outline" onclick="logout()">Logout</button>
+    </div>
+
   </div>
-
-  <div class="panel">
-    <h3>Submit Payment Details</h3>
-    <form id="paymentForm">
-      <input id="transactionId" placeholder="Transaction ID" required>
-      <input id="paymentDate" type="date" required>
-      <button type="submit">Send Details to WhatsApp</button>
-    </form>
-  </div>
-
-  <div class="panel">
-    <h3>Withdraw Funds</h3>
-    <form id="withdrawForm">
-      <select id="withdrawMethod" required>
-        <option value="">Select Withdrawal Method</option>
-        <option value="EasyPaisa">EasyPaisa</option>
-        <option value="JazzCash">JazzCash</option>
-      </select>
-
-      <input id="withdrawName" placeholder="Account Holder Name" required>
-      <input id="withdrawNumber" type="tel" placeholder="EasyPaisa / JazzCash Account Number" required>
-      <input id="withdrawAmount" type="number" placeholder="Withdrawal Amount (PKR)" min="1" step="1" required>
-
-      <button type="submit">Submit Withdrawal Request</button>
-    </form>
-  </div>
-
-</div>
-</div>
 </section>
 
-<section class="contact" id="contact">
-  <div class="container">
-    <h2 class="section-title">Customer Support</h2>
-    <p>WhatsApp: 03234146695</p>
-    <a class="btn" href="https://wa.me/923234146695" target="_blank" rel="noopener">
-      Contact on WhatsApp
-    </a>
+<section id="dashboard">
+  <h2 class="section-title">Investor <span>Dashboard</span></h2>
+  <div class="form-card">
+
+    <div id="dashboardGuest">
+      <p>Please login to view your dashboard.</p>
+      <a class="btn" href="#account">Login</a>
+    </div>
+
+    <div id="dashboardContent" class="hidden">
+      <h3 class="gold">My Account</h3>
+      <p>Name: <strong id="dashName"></strong></p>
+      <p>Email: <strong id="dashEmail"></strong></p>
+
+      <div class="dashboard-box">
+        <h3 class="gold">My Submissions</h3>
+        <div id="mySubmissions">No submissions yet.</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="payment">
+  <h2 class="section-title">Payment <span>Details</span></h2>
+  <div class="grid">
+
+    <div class="card">
+      <h3>JazzCash</h3>
+      <p>Account Number</p>
+      <div class="amount">03234146695</div>
+      <button class="btn" onclick="copyText('03234146695')">Copy Number</button>
+    </div>
+
+    <div class="card">
+      <h3>EasyPaisa</h3>
+      <p>Account Number</p>
+      <div class="amount">03478603781</div>
+      <button class="btn" onclick="copyText('03478603781')">Copy Number</button>
+    </div>
+
+  </div>
+</section>
+
+<section id="proof">
+  <h2 class="section-title">Submit Payment <span>Proof</span></h2>
+  <div class="form-card">
+
+    <p class="info">
+      اپنی ادائیگی کی رسید کی تصویر منتخب کریں اور تمام معلومات درج کریں۔
+      Submit کرنے کے بعد WhatsApp پر پیغام کھلے گا۔
+      تصویر وہاں خود Attach کرکے بھیجیں۔
+    </p>
+
+    <form id="proofForm">
+      <input id="proofName" placeholder="Customer Name" required>
+      <input id="proofPhone" placeholder="Mobile Number" required>
+
+      <select id="proofMethod" required>
+        <option value="">Select Payment Method</option>
+        <option>JazzCash</option>
+        <option>EasyPaisa</option>
+      </select>
+
+      <select id="proofPlan" required>
+        <option value="">Select Investment Plan</option>
+        <option>Starter Plan - PKR 1,000</option>
+        <option>Basic Plan - PKR 2,000</option>
+        <option>Standard Plan - PKR 3,000</option>
+        <option>Premium Plan - PKR 4,000</option>
+      </select>
+
+      <input id="proofTransaction" placeholder="Transaction ID" required>
+
+      <label>Upload Payment Screenshot</label>
+      <input id="proofImage" type="file" accept="image/*" required>
+
+      <button type="submit" class="btn">Submit Payment Proof</button>
+    </form>
+
+    <p id="proofMessage"></p>
+  </div>
+</section>
+
+<section id="deposit">
+  <h2 class="section-title">Deposit <span>Request</span></h2>
+  <div class="form-card">
+    <form id="depositForm">
+      <input id="depositName" placeholder="Full Name" required>
+      <input id="depositPhone" placeholder="Mobile Number" required>
+      <input id="depositAmount" type="number" min="1" placeholder="Deposit Amount (PKR)" required>
+      <select id="depositMethod" required>
+        <option value="">Payment Method</option>
+        <option>JazzCash</option>
+        <option>EasyPaisa</option>
+      </select>
+      <button class="btn" type="submit">Send Deposit Request</button>
+    </form>
+  </div>
+</section>
+
+<section id="withdraw">
+  <h2 class="section-title">Withdrawal <span>Request</span></h2>
+  <div class="form-card">
+    <form id="withdrawForm">
+      <input id="withdrawName" placeholder="Full Name" required>
+      <input id="withdrawPhone" placeholder="Mobile Number" required>
+      <input id="withdrawAmount" type="number" min="1" placeholder="Withdrawal Amount (PKR)" required>
+      <select id="withdrawMethod" required>
+        <option value="">Select Withdrawal Method</option>
+        <option>JazzCash</option>
+        <option>EasyPaisa</option>
+      </select>
+      <input id="withdrawAccount" placeholder="Your Account Number" required>
+      <button class="btn" type="submit">Send Withdrawal Request</button>
+    </form>
+  </div>
+</section>
+
+<section id="contact">
+  <h2 class="section-title">Contact <span>Us</span></h2>
+  <div class="grid">
+
+    <div class="card">
+      <h3>WhatsApp Support</h3>
+      <p>03478603781</p>
+      <a class="btn" href="https://wa.me/923478603781" target="_blank">Chat on WhatsApp</a>
+    </div>
+
+    <div class="card">
+      <h3>Customer Care</h3>
+      <p>fyzgroupofcompanies@gmail.com</p>
+      <a class="btn" href="mailto:fyzgroupofcompanies@gmail.com">Send Email</a>
+    </div>
+
   </div>
 </section>
 
 <footer>
-  © 2026 The Seven Edge Group of Companies | 7EDGE
+  <h2 class="gold">FYZ GROUP OF COMPANIES</h2>
+  <p>Customer Support: 03478603781</p>
+  <p>Email: fyzgroupofcompanies@gmail.com</p>
+  <p>© 2026 FYZ Group Of Companies. All Rights Reserved.</p>
 </footer>
 
 <script>
-"use strict";
+const WHATSAPP = "923478603781";
 
-const WHATSAPP="923234146695";
-const USERS_KEY="7edge_local_users_v1";
-const SESSION_KEY="7edge_local_session_v1";
+function copyText(value){
+  if(navigator.clipboard && window.isSecureContext){
+    navigator.clipboard.writeText(value)
+      .then(()=>alert("Number copied!"))
+      .catch(()=>alert("Please copy: "+value));
+  }else{
+    alert("Please copy this number: "+value);
+  }
+}
 
-let currentUser=null;
-let timerInterval=null;
+function selectPlan(name,amount){
+  document.getElementById("proofPlan").value =
+    name+" - PKR "+Number(amount).toLocaleString("en-PK");
+  document.getElementById("proof").scrollIntoView({behavior:"smooth"});
+}
 
 function getUsers(){
-  try{return JSON.parse(localStorage.getItem(USERS_KEY)||"[]")}
-  catch{return []}
+  return JSON.parse(localStorage.getItem("fyzUsers") || "[]");
 }
 
-function saveUsers(users){
-  localStorage.setItem(USERS_KEY,JSON.stringify(users));
+function currentUser(){
+  const email=localStorage.getItem("fyzCurrentUser");
+  return getUsers().find(u=>u.email===email) || null;
 }
 
-function clean(value){return String(value||"").trim()}
-function normalize(value){return clean(value).toLowerCase()}
-
-function showMessage(message){
-  const box=document.getElementById("authMessage");
-  box.textContent=message;
-  box.classList.remove("hidden");
+function getSubmissions(){
+  return JSON.parse(localStorage.getItem("fyzSubmissions") || "[]");
 }
 
-function hideMessage(){
-  document.getElementById("authMessage").classList.add("hidden");
+function saveSubmission(item){
+  const all=getSubmissions();
+  all.push(item);
+  localStorage.setItem("fyzSubmissions",JSON.stringify(all));
 }
 
-function showAuth(mode){
-  ["registerForm","loginForm","recoverForm"].forEach(id=>{
-    document.getElementById(id).classList.add("hidden");
+function updateAccount(){
+  const user=currentUser();
+
+  document.getElementById("authForms").classList.toggle("hidden",!!user);
+  document.getElementById("loggedIn").classList.toggle("hidden",!user);
+  document.getElementById("dashboardGuest").classList.toggle("hidden",!!user);
+  document.getElementById("dashboardContent").classList.toggle("hidden",!user);
+
+  if(user){
+    document.getElementById("customerName").textContent=user.name;
+    document.getElementById("dashName").textContent=user.name;
+    document.getElementById("dashEmail").textContent=user.email;
+    document.getElementById("proofName").value=user.name;
+    document.getElementById("proofPhone").value=user.phone;
+    showSubmissions(user.email);
+  }
+}
+
+function showSubmissions(email){
+  const list=getSubmissions().filter(x=>x.email===email);
+  const area=document.getElementById("mySubmissions");
+
+  if(!list.length){
+    area.textContent="No submissions yet.";
+    return;
+  }
+
+  area.innerHTML="";
+  list.forEach(item=>{
+    const box=document.createElement("div");
+    box.className="dashboard-box";
+
+    const title=document.createElement("strong");
+    title.textContent=item.type+" - "+item.plan;
+
+    const details=document.createElement("p");
+    details.textContent=
+      "Amount: PKR "+item.amount+
+      " | Method: "+item.method+
+      " | Date: "+item.date;
+
+    const status=document.createElement("p");
+    status.className="status";
+    status.textContent="Status: Submitted - Pending Review";
+
+    box.append(title,details,status);
+    area.appendChild(box);
   });
-  document.getElementById(mode+"Form").classList.remove("hidden");
-  hideMessage();
 }
 
-function randomHex(bytes=16){
-  const data=new Uint8Array(bytes);
-  crypto.getRandomValues(data);
-  return Array.from(data,b=>b.toString(16).padStart(2,"0")).join("");
-}
+document.getElementById("signupForm").addEventListener("submit",function(e){
+  e.preventDefault();
 
-function makeRecoveryCode(){return randomHex(8).toUpperCase()}
+  const user={
+    name:document.getElementById("signupName").value.trim(),
+    phone:document.getElementById("signupPhone").value.trim(),
+    email:document.getElementById("signupEmail").value.trim().toLowerCase(),
+    password:document.getElementById("signupPassword").value
+  };
 
-async function hashValue(value,salt){
-  if(!crypto.subtle){
-    throw new Error("Open this website using HTTPS or localhost.");
-  }
-
-  const encoder=new TextEncoder();
-  const key=await crypto.subtle.importKey(
-    "raw",encoder.encode(value),"PBKDF2",false,["deriveBits"]
-  );
-
-  const bits=await crypto.subtle.deriveBits({
-    name:"PBKDF2",
-    salt:encoder.encode(salt),
-    iterations:150000,
-    hash:"SHA-256"
-  },key,256);
-
-  return Array.from(new Uint8Array(bits),b=>
-    b.toString(16).padStart(2,"0")
-  ).join("");
-}
-
-function sendWhatsApp(message){
-  const url="https://wa.me/"+WHATSAPP+"?text="+encodeURIComponent(message);
-  window.open(url,"_blank","noopener");
-}
-
-function choosePlan(amount){
-  if(!currentUser){
-    alert("Please create an account or login first.");
-    location.hash="#account";
-    showAuth("login");
-    return;
-  }
-  document.getElementById("accountPlan").value=String(amount);
-  savePlan();
-  location.hash="#account";
-}
-
-function updateCurrentUser(){
   const users=getUsers();
-  const index=users.findIndex(u=>u.username===currentUser.username);
-  if(index<0)return;
-  users[index]=currentUser;
-  saveUsers(users);
-}
 
-function savePlan(){
-  if(!currentUser)return;
-
-  const amount=document.getElementById("accountPlan").value;
-  if(!["1000","2000","3000","4000"].includes(amount)){
-    alert("Please select a plan.");
+  if(users.some(u=>u.email===user.email)){
+    document.getElementById("authMessage").textContent=
+      "This email is already registered.";
     return;
   }
 
-  currentUser.plan=Number(amount);
-  updateCurrentUser();
-  renderDashboard();
-  alert("Plan selection saved.");
-}
+  users.push(user);
+  localStorage.setItem("fyzUsers",JSON.stringify(users));
+  localStorage.setItem("fyzCurrentUser",user.email);
 
-function renderDashboard(){
-  if(!currentUser)return;
+  this.reset();
+  updateAccount();
+  alert("Account created successfully!");
+});
 
-  document.getElementById("authArea").classList.add("hidden");
-  document.getElementById("dashboard").classList.remove("hidden");
+document.getElementById("loginForm").addEventListener("submit",function(e){
+  e.preventDefault();
 
-  document.getElementById("dashName").textContent=currentUser.name;
-  document.getElementById("dashUsername").textContent=currentUser.username;
-  document.getElementById("dashEmail").textContent=currentUser.email;
-  document.getElementById("dashPlan").textContent=
-    currentUser.plan?"PKR "+currentUser.plan:"Not selected";
+  const email=document.getElementById("loginEmail").value.trim().toLowerCase();
+  const password=document.getElementById("loginPassword").value;
 
-  document.getElementById("accountPlan").value=
-    currentUser.plan?String(currentUser.plan):"";
+  const user=getUsers().find(u=>u.email===email && u.password===password);
 
-  updateTimer();
-}
+  if(!user){
+    document.getElementById("authMessage").textContent=
+      "Incorrect email or password.";
+    return;
+  }
 
-function loginUser(user){
-  currentUser=user;
-  localStorage.setItem(SESSION_KEY,user.username);
-  renderDashboard();
-
-  if(timerInterval)clearInterval(timerInterval);
-  timerInterval=setInterval(updateTimer,1000);
-}
+  localStorage.setItem("fyzCurrentUser",user.email);
+  this.reset();
+  document.getElementById("authMessage").textContent="";
+  updateAccount();
+  alert("Login successful!");
+});
 
 function logout(){
-  currentUser=null;
-  localStorage.removeItem(SESSION_KEY);
-
-  if(timerInterval)clearInterval(timerInterval);
-  timerInterval=null;
-
-  document.getElementById("dashboard").classList.add("hidden");
-  document.getElementById("authArea").classList.remove("hidden");
-  showAuth("login");
-  location.hash="#account";
+  localStorage.removeItem("fyzCurrentUser");
+  updateAccount();
 }
 
-document.getElementById("registerForm").addEventListener("submit",async function(e){
+document.getElementById("proofForm").addEventListener("submit",function(e){
   e.preventDefault();
-  hideMessage();
 
-  try{
-    const name=clean(document.getElementById("regName").value);
-    const username=clean(document.getElementById("regUsername").value);
-    const email=normalize(document.getElementById("regEmail").value);
-    const phone=clean(document.getElementById("regPhone").value);
-    const password=document.getElementById("regPassword").value;
-    const confirm=document.getElementById("regConfirm").value;
+  const file=document.getElementById("proofImage").files[0];
 
-    if(!/^[a-zA-Z0-9_]{3,25}$/.test(username)){
-      showMessage("Username must be 3-25 characters: letters, numbers or underscores.");
-      return;
-    }
-
-    if(password.length<8){
-      showMessage("Password must be at least 8 characters.");
-      return;
-    }
-
-    if(password!==confirm){
-      showMessage("Passwords do not match.");
-      return;
-    }
-
-    const users=getUsers();
-
-    if(users.some(u=>normalize(u.username)===normalize(username))){
-      showMessage("Username already exists.");
-      return;
-    }
-
-    if(users.some(u=>normalize(u.email)===email)){
-      showMessage("Email already registered.");
-      return;
-    }
-
-    const salt=randomHex(16);
-    const passwordHash=await hashValue(password,salt);
-    const recoveryCode=makeRecoveryCode();
-    const recoverySalt=randomHex(16);
-    const recoveryHash=await hashValue(recoveryCode,recoverySalt);
-
-    const user={
-      name,username,email,phone,
-      salt,passwordHash,
-      recoverySalt,recoveryHash,
-      plan:null,
-      countdownEnd:null
-    };
-
-    users.push(user);
-    saveUsers(users);
-
-    alert(
-      "Account created successfully.\n\nYour recovery code:\n"+
-      recoveryCode+
-      "\n\nSave this code."
-    );
-
-    loginUser(user);
-    this.reset();
-
-  }catch(error){
-    showMessage(error.message||"Registration failed.");
-  }
-});
-
-document.getElementById("loginForm").addEventListener("submit",async function(e){
-  e.preventDefault();
-  hideMessage();
-
-  try{
-    const identity=normalize(document.getElementById("loginIdentity").value);
-    const password=document.getElementById("loginPassword").value;
-
-    const user=getUsers().find(u=>
-      normalize(u.username)===identity||normalize(u.email)===identity
-    );
-
-    if(!user){
-      showMessage("Account not found.");
-      return;
-    }
-
-    const hash=await hashValue(password,user.salt);
-
-    if(hash!==user.passwordHash){
-      showMessage("Incorrect password.");
-      return;
-    }
-
-    loginUser(user);
-    this.reset();
-
-  }catch(error){
-    showMessage(error.message||"Login failed.");
-  }
-});
-
-document.getElementById("recoverForm").addEventListener("submit",async function(e){
-  e.preventDefault();
-  hideMessage();
-
-  try{
-    const username=normalize(document.getElementById("recoverUsername").value);
-    const code=clean(document.getElementById("recoverCode").value).toUpperCase();
-    const password=document.getElementById("newPassword").value;
-    const confirm=document.getElementById("newConfirm").value;
-
-    if(password.length<8){
-      showMessage("Password must be at least 8 characters.");
-      return;
-    }
-
-    if(password!==confirm){
-      showMessage("Passwords do not match.");
-      return;
-    }
-
-    const users=getUsers();
-    const index=users.findIndex(u=>normalize(u.username)===username);
-
-    if(index<0){
-      showMessage("Account not found.");
-      return;
-    }
-
-    const user=users[index];
-    const codeHash=await hashValue(code,user.recoverySalt);
-
-    if(codeHash!==user.recoveryHash){
-      showMessage("Invalid recovery code.");
-      return;
-    }
-
-    const salt=randomHex(16);
-    user.salt=salt;
-    user.passwordHash=await hashValue(password,salt);
-
-    users[index]=user;
-    saveUsers(users);
-
-    this.reset();
-    showAuth("login");
-    showMessage("Password reset successful. Please login.");
-
-  }catch(error){
-    showMessage(error.message||"Password reset failed.");
-  }
-});
-
-function startCountdown(){
-  if(!currentUser)return;
-
-  if(!currentUser.countdownEnd||currentUser.countdownEnd<Date.now()){
-    currentUser.countdownEnd=Date.now()+7*24*60*60*1000;
-    updateCurrentUser();
-  }
-
-  updateTimer();
-}
-
-function resetCountdown(){
-  if(!currentUser)return;
-  if(!confirm("Reset your seven day countdown?"))return;
-
-  currentUser.countdownEnd=null;
-  updateCurrentUser();
-  updateTimer();
-}
-
-function updateTimer(){
-  if(!currentUser)return;
-
-  const end=currentUser.countdownEnd;
-
-  if(!end){
-    setTimer(7,0,0,0);
-    document.getElementById("timerStatus").textContent="Countdown not started";
+  if(!file || !file.type.startsWith("image/")){
+    alert("Please select a valid payment screenshot.");
     return;
   }
 
-  const remaining=Math.max(0,end-Date.now());
+  const user=currentUser();
 
-  if(remaining===0){
-    setTimer(0,0,0,0);
-    document.getElementById("timerStatus").textContent="Countdown completed";
-    if(timerInterval){
-      clearInterval(timerInterval);
-      timerInterval=null;
-    }
-    return;
-  }
+  const name=document.getElementById("proofName").value.trim();
+  const phone=document.getElementById("proofPhone").value.trim();
+  const method=document.getElementById("proofMethod").value;
+  const plan=document.getElementById("proofPlan").value;
+  const transaction=document.getElementById("proofTransaction").value.trim();
 
-  const total=Math.floor(remaining/1000);
-  const days=Math.floor(total/86400);
-  const hours=Math.floor((total%86400)/3600);
-  const minutes=Math.floor((total%3600)/60);
-  const seconds=total%60;
+  const item={
+    type:"Payment Proof",
+    name,
+    phone,
+    email:user ? user.email : "",
+    method,
+    plan,
+    amount:plan,
+    transaction,
+    date:new Date().toLocaleString()
+  };
 
-  setTimer(days,hours,minutes,seconds);
-  document.getElementById("timerStatus").textContent="Countdown running";
-}
-
-function setTimer(d,h,m,s){
-  document.getElementById("days").textContent=String(d).padStart(2,"0");
-  document.getElementById("hours").textContent=String(h).padStart(2,"0");
-  document.getElementById("minutes").textContent=String(m).padStart(2,"0");
-  document.getElementById("seconds").textContent=String(s).padStart(2,"0");
-}
-
-document.getElementById("paymentForm").addEventListener("submit",function(e){
-  e.preventDefault();
-  if(!currentUser)return;
-
-  const transaction=clean(document.getElementById("transactionId").value);
-  const date=document.getElementById("paymentDate").value;
+  saveSubmission(item);
 
   const message=
-    "7EDGE PAYMENT DETAILS\n\n"+
-    "Name: "+currentUser.name+"\n"+
-    "Username: "+currentUser.username+"\n"+
-    "Selected Plan: "+(currentUs
+`FYZ GROUP OF COMPANIES
+PAYMENT PROOF SUBMISSION
+
+Customer Name: ${name}
+Mobile Number: ${phone}
+Payment Method: ${method}
+Investment Plan: ${plan}
+Transaction ID: ${transaction}
+Screenshot File: ${file.name}
+
+Please review this payment proof.`;
+
+  document.getElementById("proofMessage").textContent=
+    "Your WhatsApp message is ready. Attach your screenshot and send it.";
+
+  updateAccount();
+
+  window.open(
+    "https://wa.me/"+WHATSAPP+"?text="+encodeURIComponent(message),
+    "_blank"
+  );
+
+  alert("WhatsApp opened. Please attach your payment screenshot and send the message.");
+});
+
+function sendRequest(message){
+  window.open(
+    "https://wa.me/"+WHATSAPP+"?text="+encodeURIComponent(message),
+    "_blank"
+  );
+}
+
+document.getElementById("depositForm").addEventListener("submit",function(e){
+  e.preventDefault();
+
+  const name=document.getElementById("depositName").value.trim();
+  const phone=document.getElementById("depositPhone").value.trim();
+  const amount=document.getElementById("depositAmount").value;
+  const method=document.getElementById("depositMethod").value;
+
+  sendRequest(
+`FYZ GROUP - DEPOSIT REQUEST
+
+Name: ${name}
+Phone: ${phone}
+Amount: PKR ${amount}
+Payment Method: ${method}
+
+Please review my deposit request.`
+  );
+
+  alert("WhatsApp opened. Please send your deposit request.");
+  this.reset();
+});
+
+document.getElementById("withdrawForm").addEventListener("submit",function(e){
+  e.preventDefault();
+
+  const name=document.getElementById("withdrawName").value.trim();
+  const phone=document.getElementById("withdrawPhone").value.trim();
+  const amount=document.getElementById("withdrawAmount").value;
+  const method=document.getElementById("withdrawMethod").value;
+  const account=document.getElementById("withdrawAccount").value.trim();
+
+  sendRequest(
+`FYZ GROUP - WITHDRAWAL REQUEST
+
+Name: ${name}
+Phone: ${phone}
+Amount: PKR ${amount}
+Withdrawal Method: ${method}
+Account Number: ${account}
+
+Please review my withdrawal request.`
+  );
+
+  alert("WhatsApp opened. Please send your withdrawal request.");
+  this.reset();
+});
+
+updateAccount();
+</script>
+
+</body>
+</html>
